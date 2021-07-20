@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoFerrerteriaSI
 {
-    public partial class Form1 : Form
+    public partial class HistorialVentas : Form
     {
-        public Form1()
+        public HistorialVentas()
         {
             InitializeComponent();
         }
