@@ -47,6 +47,7 @@ namespace ProyectoFerrerteriaSI
             this.txtcodclien = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvprod)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@ namespace ProyectoFerrerteriaSI
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Uighur", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(485, 17);
+            this.label7.Location = new System.Drawing.Point(499, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(158, 79);
             this.label7.TabIndex = 39;
@@ -94,7 +95,7 @@ namespace ProyectoFerrerteriaSI
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(79, 610);
+            this.btnagregar.Location = new System.Drawing.Point(686, 618);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(125, 42);
             this.btnagregar.TabIndex = 32;
@@ -103,7 +104,7 @@ namespace ProyectoFerrerteriaSI
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(964, 610);
+            this.btneliminar.Location = new System.Drawing.Point(964, 618);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(125, 42);
             this.btneliminar.TabIndex = 31;
@@ -203,6 +204,15 @@ namespace ProyectoFerrerteriaSI
             this.label9.TabIndex = 43;
             this.label9.Text = "Agregado a la Venta";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(79, 618);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 42);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Terminar Venta";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,6 +224,7 @@ namespace ProyectoFerrerteriaSI
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtcantprod);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.dgvprod);
@@ -253,5 +264,6 @@ namespace ProyectoFerrerteriaSI
         private System.Windows.Forms.TextBox txtcodclien;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button1;
     }
 }
