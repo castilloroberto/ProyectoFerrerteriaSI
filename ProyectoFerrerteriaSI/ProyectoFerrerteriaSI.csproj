@@ -65,7 +65,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\Conexion.cs" />
+    <Compile Include="Database\Consultas.cs" />
+    <Compile Include="Database\Productos.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Vistas\ProductosView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ProductosView.Designer.cs">
+      <DependentUpon>ProductosView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Ventas.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +100,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Reportes\HistorialVentas.rdlc" />
+    <EmbeddedResource Include="Vistas\ProductosView.resx">
+      <DependentUpon>ProductosView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>

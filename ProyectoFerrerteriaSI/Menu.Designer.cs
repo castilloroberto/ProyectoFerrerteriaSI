@@ -29,8 +29,16 @@ namespace ProyectoFerrerteriaSI
         /// </summary>
         private void InitializeComponent()
         {
-          
+            this.SuspendLayout();
+            // 
+            // Menu
+            // 
+            this.ClientSize = new System.Drawing.Size(1226, 730);
+            this.Name = "Menu";
+            this.ResumeLayout(false);
+
         }
+        #endregion
 
     }
 }

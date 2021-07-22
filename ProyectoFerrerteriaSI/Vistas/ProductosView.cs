@@ -7,20 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoFerrerteriaSI.Database;
 
-namespace ProyectoFerrerteriaSI
+namespace ProyectoFerrerteriaSI.Vistas
 {
-    public partial class HistorialVentas : Form
+    public partial class ProductosView : Form
     {
-        public HistorialVentas()
+        Productos productos = new Productos();
+        public ProductosView()
         {
             InitializeComponent();
-        }
-
-        private void HistorialVentas_Load(object sender, EventArgs e)
-        {
-
-            this.reportViewer1.RefreshReport();
+            dgv_productos.DataSource = productos.GetProdutos();
         }
     }
 }
