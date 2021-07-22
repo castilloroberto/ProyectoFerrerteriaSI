@@ -15,6 +15,8 @@ namespace ProyectoFerrerteriaSI
         public Menu()
         {
             InitializeComponent();
+            var ventas = new Ventas();
+            main_panel.Controls.Add(ventas);
         }
     }
 }
