@@ -16,14 +16,27 @@ namespace ProyectoFerrerteriaSI
         public Menu()
         {
             InitializeComponent();
+            verVentas();
+        }
+        private void verVentas()
+        {
             var ventas = new Ventas();
+            main_panel.Controls.Clear();
             main_panel.Controls.Add(ventas);
+
+        }
+     
+
+        private void btn_inventario_Click(object sender, EventArgs e)
+        {
+            main_panel.Controls.Clear();
+            var invetario = new Inventario();
+            main_panel.Controls.Add(invetario);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_ventas_Click(object sender, EventArgs e)
         {
-            var productosView = new ProductosView();
-            productosView.ShowDialog();
+            verVentas();
         }
     }
 }

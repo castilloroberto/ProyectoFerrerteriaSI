@@ -30,37 +30,50 @@ namespace ProyectoFerrerteriaSI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_inventario = new System.Windows.Forms.Button();
             this.main_panel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ventas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_ventas);
+            this.panel1.Controls.Add(this.btn_inventario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(311, 730);
             this.panel1.TabIndex = 0;
             // 
+            // btn_inventario
+            // 
+            this.btn_inventario.Location = new System.Drawing.Point(90, 246);
+            this.btn_inventario.Name = "btn_inventario";
+            this.btn_inventario.Size = new System.Drawing.Size(135, 52);
+            this.btn_inventario.TabIndex = 0;
+            this.btn_inventario.Text = "Inventario";
+            this.btn_inventario.UseVisualStyleBackColor = true;
+            this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
+            // 
             // main_panel
             // 
+            this.main_panel.BackColor = System.Drawing.Color.White;
             this.main_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main_panel.Location = new System.Drawing.Point(311, 0);
             this.main_panel.Name = "main_panel";
             this.main_panel.Size = new System.Drawing.Size(915, 730);
             this.main_panel.TabIndex = 1;
             // 
-            // button1
+            // btn_ventas
             // 
-            this.button1.Location = new System.Drawing.Point(57, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 52);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Productos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_ventas.Location = new System.Drawing.Point(90, 150);
+            this.btn_ventas.Name = "btn_ventas";
+            this.btn_ventas.Size = new System.Drawing.Size(135, 52);
+            this.btn_ventas.TabIndex = 0;
+            this.btn_ventas.Text = "Ventas";
+            this.btn_ventas.UseVisualStyleBackColor = true;
+            this.btn_ventas.Click += new System.EventHandler(this.btn_ventas_Click);
             // 
             // Menu
             // 
@@ -76,6 +89,7 @@ namespace ProyectoFerrerteriaSI
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel main_panel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_inventario;
+        private System.Windows.Forms.Button btn_ventas;
     }
 }

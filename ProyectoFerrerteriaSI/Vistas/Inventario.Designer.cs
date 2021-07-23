@@ -1,17 +1,17 @@
 ﻿
 namespace ProyectoFerrerteriaSI.Vistas
 {
-    partial class ProductosView
+    partial class Inventario
     {
-        /// <summary>
-        /// Required designer variable.
+        /// <summary> 
+        /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
+        /// <summary> 
+        /// Limpiar los recursos que se estén usando.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,55 +21,55 @@ namespace ProyectoFerrerteriaSI.Vistas
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código generado por el Diseñador de componentes
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// <summary> 
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
             this.dgv_productos = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_agregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_productos
             // 
             this.dgv_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_productos.Location = new System.Drawing.Point(48, 139);
+            this.dgv_productos.Location = new System.Drawing.Point(92, 149);
             this.dgv_productos.Name = "dgv_productos";
             this.dgv_productos.RowHeadersWidth = 51;
             this.dgv_productos.RowTemplate.Height = 24;
-            this.dgv_productos.Size = new System.Drawing.Size(727, 260);
+            this.dgv_productos.Size = new System.Drawing.Size(1077, 417);
             this.dgv_productos.TabIndex = 0;
             // 
-            // textBox1
+            // btn_agregar
             // 
-            this.textBox1.Location = new System.Drawing.Point(582, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.btn_agregar.Location = new System.Drawing.Point(1012, 588);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(156, 43);
+            this.btn_agregar.TabIndex = 1;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
-            // ProductosView
+            // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.dgv_productos);
-            this.Name = "ProductosView";
-            this.Text = "Productos";
+            this.Name = "Inventario";
+            this.Size = new System.Drawing.Size(1281, 691);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_productos;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_agregar;
     }
 }
