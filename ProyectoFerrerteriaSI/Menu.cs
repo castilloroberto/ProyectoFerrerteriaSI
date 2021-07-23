@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFerrerteriaSI.Vistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,12 @@ namespace ProyectoFerrerteriaSI
             InitializeComponent();
             var ventas = new Ventas();
             main_panel.Controls.Add(ventas);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var productosView = new ProductosView();
+            productosView.ShowDialog();
         }
     }
 }
