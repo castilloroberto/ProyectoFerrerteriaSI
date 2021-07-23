@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFerrerteriaSI.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace ProyectoFerrerteriaSI
 {
     public partial class Ventas : UserControl
     {
+        Productos productos = new Productos();
+
         public Ventas()
         {
             InitializeComponent();
+            CargarProductos();
+           
+        }
+
+        private void CargarProductos()
+        {
+            dgvprod.DataSource = productos.GetProdutos();
         }
 
         private void Ventas_Load(object sender, EventArgs e)
@@ -23,6 +33,11 @@ namespace ProyectoFerrerteriaSI
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

@@ -64,9 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\Clientes.cs" />
     <Compile Include="Database\Conexion.cs" />
     <Compile Include="Database\Consultas.cs" />
+    <Compile Include="Database\DetalleVentas.cs" />
     <Compile Include="Database\Productos.cs" />
+    <Compile Include="Database\Ventas.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Vistas\ProductosView.cs">
       <SubType>Form</SubType>
