@@ -43,5 +43,14 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
             }
 
         }
+
+
+
+        private void btn_addProveedor_Click_1(object sender, EventArgs e)
+        {
+            var proveedores = new AgregarProveedor();
+            proveedores.ShowDialog();
+            // actualia¡zar formulario para leer nuevos proveedores
+        }
     }
 }

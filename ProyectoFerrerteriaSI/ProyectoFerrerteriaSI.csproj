@@ -69,6 +69,7 @@
     <Compile Include="Database\Consultas.cs" />
     <Compile Include="Database\DetalleVentas.cs" />
     <Compile Include="Database\Productos.cs" />
+    <Compile Include="Database\Usuarios.cs" />
     <Compile Include="Database\Ventas.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Vistas\Inventario.cs">
@@ -88,6 +89,12 @@
     </Compile>
     <Compile Include="Vistas\Prompts\AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Prompts\AgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Prompts\AgregarProveedor.Designer.cs">
+      <DependentUpon>AgregarProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Ventas.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Prompts\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Prompts\AgregarProveedor.resx">
+      <DependentUpon>AgregarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>

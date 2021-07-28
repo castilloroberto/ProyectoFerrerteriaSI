@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoFerrerteriaSI
+namespace ProyectoFerrerteriaSI.Vistas.Prompts
 {
-    public partial class Login : Form
+    public partial class AgregarProveedor : Form
     {
-        public Login()
+        public AgregarProveedor()
         {
             InitializeComponent();
-        }
-
-        private void btn_entrar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

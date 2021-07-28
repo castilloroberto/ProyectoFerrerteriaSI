@@ -43,6 +43,9 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
             this.cb_proveedor = new System.Windows.Forms.ComboBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
+            this.btn_addProveedor = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_nombreProducto
@@ -113,7 +116,7 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(109, 267);
+            this.label6.Location = new System.Drawing.Point(109, 292);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 17);
             this.label6.TabIndex = 1;
@@ -122,7 +125,7 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
             // cb_marca
             // 
             this.cb_marca.FormattingEnabled = true;
-            this.cb_marca.Location = new System.Drawing.Point(109, 289);
+            this.cb_marca.Location = new System.Drawing.Point(109, 314);
             this.cb_marca.Name = "cb_marca";
             this.cb_marca.Size = new System.Drawing.Size(208, 24);
             this.cb_marca.TabIndex = 2;
@@ -130,7 +133,7 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(366, 267);
+            this.label7.Location = new System.Drawing.Point(366, 292);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 17);
             this.label7.TabIndex = 1;
@@ -139,7 +142,7 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
             // cb_proveedor
             // 
             this.cb_proveedor.FormattingEnabled = true;
-            this.cb_proveedor.Location = new System.Drawing.Point(366, 289);
+            this.cb_proveedor.Location = new System.Drawing.Point(366, 314);
             this.cb_proveedor.Name = "cb_proveedor";
             this.cb_proveedor.Size = new System.Drawing.Size(208, 24);
             this.cb_proveedor.TabIndex = 2;
@@ -147,7 +150,7 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
             // btn_cancelar
             // 
             this.btn_cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_cancelar.Location = new System.Drawing.Point(109, 430);
+            this.btn_cancelar.Location = new System.Drawing.Point(109, 468);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(150, 37);
             this.btn_cancelar.TabIndex = 3;
@@ -156,7 +159,8 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
             // 
             // btn_guardar
             // 
-            this.btn_guardar.Location = new System.Drawing.Point(424, 430);
+            this.btn_guardar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_guardar.Location = new System.Drawing.Point(424, 468);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(150, 37);
             this.btn_guardar.TabIndex = 3;
@@ -164,12 +168,43 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
+            // btn_addProveedor
+            // 
+            this.btn_addProveedor.Location = new System.Drawing.Point(499, 355);
+            this.btn_addProveedor.Name = "btn_addProveedor";
+            this.btn_addProveedor.Size = new System.Drawing.Size(75, 23);
+            this.btn_addProveedor.TabIndex = 4;
+            this.btn_addProveedor.Text = "Agregar";
+            this.btn_addProveedor.UseVisualStyleBackColor = true;
+            this.btn_addProveedor.Click += new System.EventHandler(this.btn_addProveedor_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(242, 355);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Agregar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(499, 239);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Agregar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_cancelar;
             this.ClientSize = new System.Drawing.Size(688, 558);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_addProveedor);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.cb_proveedor);
@@ -185,6 +220,7 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
             this.Controls.Add(this.txt_precio);
             this.Controls.Add(this.txt_nombreProducto);
             this.Name = "AgregarProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AgregarProducto";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,5 +243,8 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
         private System.Windows.Forms.ComboBox cb_proveedor;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Button btn_addProveedor;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
