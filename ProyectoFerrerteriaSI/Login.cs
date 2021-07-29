@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFerrerteriaSI.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace ProyectoFerrerteriaSI
 {
@@ -17,9 +20,10 @@ namespace ProyectoFerrerteriaSI
             InitializeComponent();
         }
 
+        
         private void btn_entrar_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
