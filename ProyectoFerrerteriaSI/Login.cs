@@ -13,6 +13,7 @@ namespace ProyectoFerrerteriaSI
 {
     public partial class Login : Form
     {
+        Usuarios usuarios = new Usuarios();
         public Login()
         {
             InitializeComponent();
@@ -21,7 +22,17 @@ namespace ProyectoFerrerteriaSI
         private void btn_entrar_Click(object sender, EventArgs e)
         {
 
-            
+            usuarios.NombreUsuario = txt_usuario.Text;
+            usuarios.Clave = txt_clave.Text;
+            bool res = usuarios.Loggear();
+
+
+            if (res == true)
+            {
+                Menu menu = new Menu(usuarios);
+                menu.Show();
+                this.Hide();
+            }
         }
     }
 }
