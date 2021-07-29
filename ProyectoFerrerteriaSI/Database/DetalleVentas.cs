@@ -13,7 +13,7 @@ namespace ProyectoFerrerteriaSI.Database
         public Guid CodVenta { get; set; }
         public int CodProd { get; set; }
         public int Cantidad { get; set; }
-        public float Precio { get; set; }
+        public decimal Precio { get; set; }
         private bool Insertar( )
         {
             var db = GetConexion();//database

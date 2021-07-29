@@ -35,5 +35,10 @@ namespace ProyectoFerrerteriaSI.Vistas
             agregar.ShowDialog();
             CargarProductos();
         }
+
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

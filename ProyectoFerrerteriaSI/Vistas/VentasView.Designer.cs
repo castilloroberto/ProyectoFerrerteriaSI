@@ -101,6 +101,7 @@ namespace ProyectoFerrerteriaSI
             this.btnagregar.TabIndex = 32;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // btneliminar
             // 
@@ -120,6 +121,8 @@ namespace ProyectoFerrerteriaSI
             this.dgvprod.RowTemplate.Height = 24;
             this.dgvprod.Size = new System.Drawing.Size(732, 314);
             this.dgvprod.TabIndex = 30;
+            this.dgvprod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvprod_CellContentClick);
+            this.dgvprod.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvprod_CellMouseClick);
             // 
             // txtbusqueda
             // 

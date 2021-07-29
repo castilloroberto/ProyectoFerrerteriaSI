@@ -62,6 +62,7 @@ namespace ProyectoFerrerteriaSI.Vistas
             this.Controls.Add(this.dgv_productos);
             this.Name = "Inventario";
             this.Size = new System.Drawing.Size(1281, 691);
+            this.Load += new System.EventHandler(this.Inventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).EndInit();
             this.ResumeLayout(false);
 
