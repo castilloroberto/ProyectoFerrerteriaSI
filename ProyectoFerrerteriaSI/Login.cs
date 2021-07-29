@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFerrerteriaSI.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,7 @@ namespace ProyectoFerrerteriaSI
         private void btn_entrar_Click(object sender, EventArgs e)
         {
 
+            
         }
     }
 }

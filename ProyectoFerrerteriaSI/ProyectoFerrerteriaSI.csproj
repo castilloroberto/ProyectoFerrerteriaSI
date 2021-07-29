@@ -71,6 +71,11 @@
     <Compile Include="Database\Productos.cs" />
     <Compile Include="Database\Usuarios.cs" />
     <Compile Include="Database\Ventas.cs" />
+    <Compile Include="FerreteriaDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FerreteriaDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Vistas\Inventario.cs">
       <SubType>UserControl</SubType>
@@ -156,6 +161,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="FerreteriaDBDataSet.xsc">
+      <DependentUpon>FerreteriaDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FerreteriaDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FerreteriaDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FerreteriaDBDataSet.xss">
+      <DependentUpon>FerreteriaDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
