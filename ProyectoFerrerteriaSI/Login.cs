@@ -9,8 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace ProyectoFerrerteriaSI
 {
     public partial class Login : Form
@@ -20,9 +18,9 @@ namespace ProyectoFerrerteriaSI
             InitializeComponent();
         }
 
-        
         private void btn_entrar_Click(object sender, EventArgs e)
         {
+
             
         }
     }

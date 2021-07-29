@@ -29,7 +29,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.81703cm</Top>
-          <Left>11.01937cm</Left>
+          <Left>10.21504cm</Left>
           <Height>1.03858cm</Height>
           <Width>6.22533cm</Width>
           <Style>
@@ -142,6 +142,15 @@
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="FerreteriaDBDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>218b46ac-50d6-4313-8973-3b293b152001</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>6662d759-0307-4394-8853-0e25f836ceb1</rd:ReportID>
 </Report>

@@ -64,37 +64,37 @@ namespace ProyectoFerrerteriaSI
             // btn_ver
             // 
             this.btn_ver.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ver.Location = new System.Drawing.Point(1007, 103);
+            this.btn_ver.Location = new System.Drawing.Point(23, 106);
             this.btn_ver.Name = "btn_ver";
-            this.btn_ver.Size = new System.Drawing.Size(134, 36);
+            this.btn_ver.Size = new System.Drawing.Size(202, 36);
             this.btn_ver.TabIndex = 3;
-            this.btn_ver.Text = "Mostrar";
+            this.btn_ver.Text = "Mostrar Ventas";
             this.btn_ver.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(510, 61);
+            this.label2.Location = new System.Drawing.Point(747, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 28);
+            this.label2.Size = new System.Drawing.Size(26, 28);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Fecha de Final";
+            this.label2.Text = "al";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 61);
+            this.label1.Location = new System.Drawing.Point(335, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 28);
+            this.label1.Size = new System.Drawing.Size(33, 28);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Fecha de Inicio";
+            this.label1.Text = "de";
             // 
             // stp_fin
             // 
             this.stp_fin.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stp_fin.Location = new System.Drawing.Point(515, 103);
+            this.stp_fin.Location = new System.Drawing.Point(798, 105);
             this.stp_fin.Name = "stp_fin";
             this.stp_fin.Size = new System.Drawing.Size(325, 34);
             this.stp_fin.TabIndex = 1;
@@ -102,7 +102,7 @@ namespace ProyectoFerrerteriaSI
             // dtp_inicio
             // 
             this.dtp_inicio.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_inicio.Location = new System.Drawing.Point(46, 103);
+            this.dtp_inicio.Location = new System.Drawing.Point(374, 105);
             this.dtp_inicio.Name = "dtp_inicio";
             this.dtp_inicio.Size = new System.Drawing.Size(318, 34);
             this.dtp_inicio.TabIndex = 0;
@@ -116,6 +116,7 @@ namespace ProyectoFerrerteriaSI
             this.Controls.Add(this.reportViewer1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HistorialVentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.HistorialVentas_Load);
             this.panel1.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using ProyectoFerrerteriaSI.Vistas;
+﻿using ProyectoFerrerteriaSI.Database;
+using ProyectoFerrerteriaSI.Vistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,12 +12,20 @@ using System.Windows.Forms;
 
 namespace ProyectoFerrerteriaSI
 {
+
     public partial class Menu : Form
     {
-        public Menu()
+        
+        public Menu(Usuarios usuario)
         {
             InitializeComponent();
             verVentas();
+
+            if (usuario.IDNivel != 1)
+            {
+                btn_historial.Visible = false;
+            }
+
         }
         private void verVentas()
         {
@@ -37,6 +46,12 @@ namespace ProyectoFerrerteriaSI
         private void btn_ventas_Click(object sender, EventArgs e)
         {
             verVentas();
+        }
+
+        private void btn_historial_Click(object sender, EventArgs e)
+        {
+            var historial = new HistorialVentas();
+            historial.Show();
         }
     }
 }
