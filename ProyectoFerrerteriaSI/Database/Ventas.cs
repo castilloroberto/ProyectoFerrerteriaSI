@@ -11,9 +11,15 @@ namespace ProyectoFerrerteriaSI.Database
     public class Ventas: Conexion
     {
 
-        public int CodVenta { get; set; }
+        public Guid CodVenta { get; set; }
         public string CodCliente { get; set; }
         public string NomUsuario { get; set; }
+
+        public int CodFact { get; set; }
+        public DateTime fecha { get; set; }
+
+        public List<DetalleVentas> Detalles;
+       
 
         private bool Insertar()
         {
