@@ -31,6 +31,7 @@ namespace ProyectoFerrerteriaSI.Vistas
         {
             this.dgv_productos = new System.Windows.Forms.DataGridView();
             this.btn_agregar = new System.Windows.Forms.Button();
+            this.btnDesactivar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +55,21 @@ namespace ProyectoFerrerteriaSI.Vistas
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
+            // btnDesactivar
+            // 
+            this.btnDesactivar.Location = new System.Drawing.Point(785, 588);
+            this.btnDesactivar.Name = "btnDesactivar";
+            this.btnDesactivar.Size = new System.Drawing.Size(156, 43);
+            this.btnDesactivar.TabIndex = 2;
+            this.btnDesactivar.Text = "Desactivar producto";
+            this.btnDesactivar.UseVisualStyleBackColor = true;
+            this.btnDesactivar.Click += new System.EventHandler(this.btnDesactivar_Click);
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnDesactivar);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.dgv_productos);
             this.Name = "Inventario";
@@ -72,5 +84,6 @@ namespace ProyectoFerrerteriaSI.Vistas
 
         private System.Windows.Forms.DataGridView dgv_productos;
         private System.Windows.Forms.Button btn_agregar;
+        private System.Windows.Forms.Button btnDesactivar;
     }
 }
