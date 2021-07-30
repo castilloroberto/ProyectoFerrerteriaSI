@@ -15,7 +15,7 @@ namespace ProyectoFerrerteriaSI
     {
         Productos productos = new Productos();
         Guid codventa;
-        Ventas Venta = new Ventas();
+        Venta Venta = new Venta();
 
         public Ventas()
         {
@@ -58,11 +58,21 @@ namespace ProyectoFerrerteriaSI
                 CodProd = getcell(0),
                 Cantidad = int.Parse(txtcantprod.Text),
                 Precio = decimal.Parse(txtprecio.Text),
-                CodVenta = codventa
-
+                CodVenta = codventa,
+                NomProd=getcell(1)
+                
         };
             //llamar a la clase de ventas
+            Venta.Detalles.Add(dtv);
+            Cargarlistview();
 
+        }
+
+        private void Cargarlistview()
+        {
+            lvproducto.DataSource = null;
+            lvproducto.DataSource = Venta.Detalles;
+            lvproducto.DisplayMember = "info";  //se va a mostrar en lview
         }
 
         private void dgvprod_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -81,6 +91,51 @@ namespace ProyectoFerrerteriaSI
         {
             decimal cell = getcell(2);//esto es como mostrar la columna que le estas asignando
             txtprecio.Text = string.Format("{0}",cell) ;//insertando un valor dentro de esa expresion
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            var ind = lvproducto.SelectedIndex;
+            Venta.Detalles.RemoveAt(ind);
+            Cargarlistview();
+        }
+
+        private void btntermventa(object sender, EventArgs e)
+        {
+            Clientes Cliente = new Clientes() {
+
+                CodCliente = txtcodclien.Text,
+                NomCliente= txtclien.Text,
+                Telefono= txttelclien.Text
+
+            };
+
+
+            string msg = "";
+            var res= Cliente.Insertar(); //valor booleano
+            if ( res == true)
+            { 
+                res=Venta.SaveVenta();
+
+                if(res==true) {
+                    msg = "Venta insertada correctamente";
+                }
+                else
+                {
+                    msg = "No se pudo insertar la venta";
+                }
+            }
+
+            else
+            {
+                msg = "No se pudo insertar los datos del cliente";
+            }
+
+            MessageBox.Show(msg, "Mensaje del Sistema");
+
+
+
+            
         }
     }
 }

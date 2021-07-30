@@ -45,9 +45,9 @@ namespace ProyectoFerrerteriaSI
             this.txttelclien = new System.Windows.Forms.TextBox();
             this.txtclien = new System.Windows.Forms.TextBox();
             this.txtcodclien = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btntermventa = new System.Windows.Forms.Button();
+            this.lvproducto = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvprod)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +111,7 @@ namespace ProyectoFerrerteriaSI
             this.btneliminar.TabIndex = 31;
             this.btneliminar.Text = "Quitar Producto";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // dgvprod
             // 
@@ -189,15 +190,6 @@ namespace ProyectoFerrerteriaSI
             this.txtcodclien.Size = new System.Drawing.Size(247, 22);
             this.txtcodclien.TabIndex = 22;
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(841, 241);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(248, 314);
-            this.listView1.TabIndex = 42;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -207,28 +199,37 @@ namespace ProyectoFerrerteriaSI
             this.label9.TabIndex = 43;
             this.label9.Text = "Agregado a la Venta";
             // 
-            // button1
+            // btntermventa
             // 
-            this.button1.Location = new System.Drawing.Point(79, 618);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 42);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Terminar Venta";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btntermventa.Location = new System.Drawing.Point(79, 618);
+            this.btntermventa.Name = "btntermventa";
+            this.btntermventa.Size = new System.Drawing.Size(125, 42);
+            this.btntermventa.TabIndex = 32;
+            this.btntermventa.Text = "Terminar Venta";
+            this.btntermventa.UseVisualStyleBackColor = true;
+            this.btntermventa.Click += new System.EventHandler(this.btntermventa);
+            // 
+            // lvproducto
+            // 
+            this.lvproducto.FormattingEnabled = true;
+            this.lvproducto.ItemHeight = 16;
+            this.lvproducto.Location = new System.Drawing.Point(870, 268);
+            this.lvproducto.Name = "lvproducto";
+            this.lvproducto.Size = new System.Drawing.Size(219, 276);
+            this.lvproducto.TabIndex = 44;
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lvproducto);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtprecio);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtcantprod);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btntermventa);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.dgvprod);
@@ -266,8 +267,8 @@ namespace ProyectoFerrerteriaSI
         private System.Windows.Forms.TextBox txttelclien;
         private System.Windows.Forms.TextBox txtclien;
         private System.Windows.Forms.TextBox txtcodclien;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btntermventa;
+        private System.Windows.Forms.ListBox lvproducto;
     }
 }

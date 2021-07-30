@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFerrerteriaSI.Database
 {
-    public class Ventas: Conexion
+    public class Venta: Conexion
     {
 
         public Guid CodVenta { get; set; }
@@ -18,8 +18,34 @@ namespace ProyectoFerrerteriaSI.Database
         public int CodFact { get; set; }
         public DateTime fecha { get; set; }
 
-        public List<DetalleVentas> Detalles;
-       
+        public List<DetalleVentas> Detalles { get; set; }
+
+        public Venta() {
+
+            Detalles = new List<DetalleVentas>();
+        
+        
+        
+        }
+
+        public bool SaveVenta()
+        {
+           var cont = 0;
+           var res = Insertar();
+            if (res==true)
+            {
+                foreach (DetalleVentas dv in Detalles ) {
+
+                    res = dv.Insertar();
+                   
+                    
+                  
+                
+                } //para recorrer los detalles
+            }
+
+            return res;
+        }
 
         private bool Insertar()
         {

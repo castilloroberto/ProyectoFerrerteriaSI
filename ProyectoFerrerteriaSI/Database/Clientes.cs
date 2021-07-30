@@ -10,19 +10,25 @@ namespace ProyectoFerrerteriaSI.Database
 {
     public class Clientes: Conexion
     {
-        private bool Insertar(String Prod, float precio, int stock, int CodCat, int CodMarca, int CodProv)
+        public string CodCliente { get; set; }
+        public string NomCliente { get; set; }
+        public string ApeCliente { get; set; }
+        public string Direccion { get; set; }
+        public string Telefono { get; set; }
+
+        public bool Insertar()
         {
             var db = GetConexion();//database
             SqlCommand command = new SqlCommand("" ,db );
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@Producto",Prod);
-            command.Parameters.AddWithValue("@Precio",precio);
-            command.Parameters.AddWithValue("@Stock",stock);
-            command.Parameters.AddWithValue("@CodCat",CodCat);
-            command.Parameters.AddWithValue("@CodMarca",CodMarca);
-            command.Parameters.AddWithValue("@CodProv",CodProv);
+            command.Parameters.AddWithValue("@CodCliente",CodCliente);
+            command.Parameters.AddWithValue("@NomCliente",NomCliente);
+            command.Parameters.AddWithValue("@ApeCliente",ApeCliente);
+            command.Parameters.AddWithValue("@Direccion",Direccion);
+            command.Parameters.AddWithValue("@Telefono",Telefono);
+           
 
-           var row=command.ExecuteNonQuery();
+            var row=command.ExecuteNonQuery();
             return row > 0;
 
 

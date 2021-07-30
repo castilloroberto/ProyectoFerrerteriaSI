@@ -14,7 +14,24 @@ namespace ProyectoFerrerteriaSI.Database
         public int CodProd { get; set; }
         public int Cantidad { get; set; }
         public decimal Precio { get; set; }
-        private bool Insertar( )
+
+        public string NomProd { get; set; }
+
+
+        public string info { 
+            
+            get {
+
+                return $"{Cantidad} - {NomProd} - sub: {Precio*Cantidad}";
+            
+            
+            
+            }
+            
+            
+             }
+
+        public bool Insertar( )
         {
             var db = GetConexion();//database
             db.Open();
