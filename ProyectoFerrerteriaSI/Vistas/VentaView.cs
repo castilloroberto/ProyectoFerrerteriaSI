@@ -108,6 +108,8 @@ namespace ProyectoFerrerteriaSI
 
             };
 
+            Venta.CodCliente = txtcodclien.Text;
+
 
             string msg = "";
             var res = Cliente.Insertar(); //valor booleano
