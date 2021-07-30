@@ -70,7 +70,7 @@
     <Compile Include="Database\DetalleVentas.cs" />
     <Compile Include="Database\Productos.cs" />
     <Compile Include="Database\Usuarios.cs" />
-    <Compile Include="Database\Ventas.cs" />
+    <Compile Include="Database\Venta.cs" />
     <Compile Include="FerreteriaDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,11 +101,11 @@
     <Compile Include="Vistas\Prompts\AgregarProveedor.Designer.cs">
       <DependentUpon>AgregarProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\VentasView.cs">
+    <Compile Include="Vistas\VentaView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\VentasView.Designer.cs">
-      <DependentUpon>VentasView.cs</DependentUpon>
+    <Compile Include="Vistas\VentaView.Designer.cs">
+      <DependentUpon>VentaView.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\HistorialVentas.cs">
       <SubType>Form</SubType>
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="Vistas\Prompts\AgregarProveedor.resx">
       <DependentUpon>AgregarProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\VentasView.resx">
-      <DependentUpon>VentasView.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\VentaView.resx">
+      <DependentUpon>VentaView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\HistorialVentas.resx">
       <DependentUpon>HistorialVentas.cs</DependentUpon>

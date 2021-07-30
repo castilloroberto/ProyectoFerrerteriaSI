@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFerrerteriaSI.Database
 {
-    public class Ventas: Conexion
+    public class Venta: Conexion
     {
 
         public Guid CodVenta { get; set; }
@@ -18,22 +18,49 @@ namespace ProyectoFerrerteriaSI.Database
         public int CodFact { get; set; }
         public DateTime fecha { get; set; }
 
-        public List<DetalleVentas> Detalles;
-       
+        public List<DetalleVentas> Detalles { get; set; }
+
+        public Venta() {
+
+            Detalles = new List<DetalleVentas>();
+        
+        
+        
+        }
+
+        public bool SaveVenta()
+        {
+           
+           var res = Insertar();
+            if (res==true)
+            {
+                foreach (DetalleVentas dv in Detalles ) {
+
+                    res = dv.Insertar();
+                   
+                    
+                  
+                
+                } //para recorrer los detalles
+            }
+
+            return res;
+        }
 
         private bool Insertar()
         {
             var db = GetConexion();//database
             db.Open();
-            SqlCommand command = new SqlCommand("", db);
+            SqlCommand command = new SqlCommand("sp_insertVenta", db);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@CodVenta", CodVenta);
             command.Parameters.AddWithValue("@CodCliente", CodCliente);
             command.Parameters.AddWithValue("@NomUsuario", NomUsuario);
-            db.Close();
+           
 
 
             var row = command.ExecuteNonQuery();
+            db.Close();
             return row > 0;
 
 
