@@ -47,10 +47,7 @@ namespace ProyectoFerrerteriaSI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
@@ -100,24 +97,26 @@ namespace ProyectoFerrerteriaSI
             Cargarlistview();
         }
 
-        private void btntermventa(object sender, EventArgs e)
+        private void btntermventa_Click(object sender, EventArgs e)
         {
-            Clientes Cliente = new Clientes() {
+            Clientes Cliente = new Clientes()
+            {
 
                 CodCliente = txtcodclien.Text,
-                NomCliente= txtclien.Text,
-                Telefono= txttelclien.Text
+                NomCliente = txtclien.Text,
+                Telefono = txttelclien.Text
 
             };
 
 
             string msg = "";
-            var res= Cliente.Insertar(); //valor booleano
-            if ( res == true)
-            { 
-                res=Venta.SaveVenta();
+            var res = Cliente.Insertar(); //valor booleano
+            if (res == true)
+            {
+                res = Venta.SaveVenta();
 
-                if(res==true) {
+                if (res == true)
+                {
                     msg = "Venta insertada correctamente";
                 }
                 else
@@ -132,10 +131,6 @@ namespace ProyectoFerrerteriaSI
             }
 
             MessageBox.Show(msg, "Mensaje del Sistema");
-
-
-
-            
         }
     }
 }

@@ -207,7 +207,7 @@ namespace ProyectoFerrerteriaSI
             this.btntermventa.TabIndex = 32;
             this.btntermventa.Text = "Terminar Venta";
             this.btntermventa.UseVisualStyleBackColor = true;
-            this.btntermventa.Click += new System.EventHandler(this.btntermventa);
+            this.btntermventa.Click += new System.EventHandler(this.btntermventa_Click);
             // 
             // lvproducto
             // 

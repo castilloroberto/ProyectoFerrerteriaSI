@@ -19,7 +19,8 @@ namespace ProyectoFerrerteriaSI.Database
         public bool Insertar()
         {
             var db = GetConexion();//database
-            SqlCommand command = new SqlCommand("" ,db );
+            db.Open();
+            SqlCommand command = new SqlCommand("sp_insertCliente" ,db );
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@CodCliente",CodCliente);
             command.Parameters.AddWithValue("@NomCliente",NomCliente);
@@ -29,6 +30,7 @@ namespace ProyectoFerrerteriaSI.Database
            
 
             var row=command.ExecuteNonQuery();
+            db.Close();
             return row > 0;
 
 

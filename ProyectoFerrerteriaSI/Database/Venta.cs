@@ -30,7 +30,7 @@ namespace ProyectoFerrerteriaSI.Database
 
         public bool SaveVenta()
         {
-           var cont = 0;
+           
            var res = Insertar();
             if (res==true)
             {
@@ -51,15 +51,16 @@ namespace ProyectoFerrerteriaSI.Database
         {
             var db = GetConexion();//database
             db.Open();
-            SqlCommand command = new SqlCommand("", db);
+            SqlCommand command = new SqlCommand("sp_insertVenta", db);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@CodVenta", CodVenta);
             command.Parameters.AddWithValue("@CodCliente", CodCliente);
             command.Parameters.AddWithValue("@NomUsuario", NomUsuario);
-            db.Close();
+           
 
 
             var row = command.ExecuteNonQuery();
+            db.Close();
             return row > 0;
 
 

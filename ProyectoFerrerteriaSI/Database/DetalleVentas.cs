@@ -35,15 +35,16 @@ namespace ProyectoFerrerteriaSI.Database
         {
             var db = GetConexion();//database
             db.Open();
-            SqlCommand command = new SqlCommand("", db);
+            SqlCommand command = new SqlCommand("sp_insertarDetalleVenta", db);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@CodVenta", CodVenta);
             command.Parameters.AddWithValue("@CodProd", CodProd);
             command.Parameters.AddWithValue("@Cant", Cantidad);
             command.Parameters.AddWithValue("@Precio", Precio);
-            db.Close();
+           
 
             var row = command.ExecuteNonQuery();
+            db.Close();
             return row > 0;
 
 
