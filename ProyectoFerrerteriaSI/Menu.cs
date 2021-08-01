@@ -13,13 +13,17 @@ using System.Windows.Forms;
 namespace ProyectoFerrerteriaSI
 {
 
+
+
     public partial class Menu : Form
     {
+        public static Usuarios Usuario;
         
         public Menu(Usuarios usuario)
         {
             InitializeComponent();
             verVentas();
+            Usuario = usuario;
 
             if (usuario.IDNivel != 1)
             {
@@ -52,6 +56,11 @@ namespace ProyectoFerrerteriaSI
         {
             var historial = new HistorialVentas();
             historial.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

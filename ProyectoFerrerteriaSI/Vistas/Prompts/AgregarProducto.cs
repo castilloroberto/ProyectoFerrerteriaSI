@@ -13,10 +13,40 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
 {
     public partial class AgregarProducto : Form
     {
+        Consultas consulta = new Consultas();
         public AgregarProducto()
+
         {
             InitializeComponent();
+            CargarCategorias();
+            CargarMarcas();
+            CargarProve();
+
         }
+
+        private void CargarCategorias ()
+        {
+            cb_categoria.DataSource = null;
+            cb_categoria.DataSource = consulta.select("Select * from Categorias");
+            cb_categoria.DisplayMember = "Nom_Categoria";
+            cb_categoria.ValueMember = "Cod_Categoria";
+        }
+        private void CargarMarcas()
+        {
+            cb_marca.DataSource = null;
+            cb_marca.DataSource = consulta.select("Select * from Marcas");
+            cb_marca.DisplayMember = "Marca";
+            cb_marca.ValueMember = "Cod_Marca";
+        }
+
+        private void CargarProve()
+        {
+            cb_proveedor.DataSource = null;
+            cb_proveedor.DataSource = consulta.select("Select * from Proveedor");
+            cb_proveedor.DisplayMember = "Nomb_Empresa";
+            cb_proveedor.ValueMember = "Cod_Proveedor";
+        }
+
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
@@ -25,9 +55,9 @@ namespace ProyectoFerrerteriaSI.Vistas.Prompts
                 Producto = txt_nombreProducto.Text,
                 Precio = float.Parse(txt_precio.Text),
                 Stock = int.Parse(txt_stock.Text),
-                //CodCategoria = cb_categoria.SelectedValue.GetHashCode(),
-                //CodMarca = cb_marca.SelectedValue.GetHashCode(),
-                //CodProveedor = cb_proveedor.SelectedValue.GetHashCode()
+                CodCategoria = cb_categoria.SelectedValue.GetHashCode(),
+                CodMarca = cb_marca.SelectedValue.GetHashCode(),
+                CodProveedor = cb_proveedor.SelectedValue.GetHashCode()
             };
             var res = producto.Insertar();
 

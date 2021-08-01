@@ -14,7 +14,7 @@ namespace ProyectoFerrerteriaSI
     public partial class Ventas : UserControl
     {
         Productos productos = new Productos();
-        Guid codventa;
+        
         Venta Venta = new Venta();
 
         public Ventas()
@@ -27,7 +27,13 @@ namespace ProyectoFerrerteriaSI
 
         private void limpiarventas()
         {
-            codventa = Guid.NewGuid();
+
+            Venta = new Venta();
+            Venta.CodVenta = Guid.NewGuid();
+            Cargarlistview();
+            txtcodclien.Clear();
+            txtclien.Clear();
+            txttelclien.Clear();
 
         }
 
@@ -55,13 +61,15 @@ namespace ProyectoFerrerteriaSI
                 CodProd = getcell(0),
                 Cantidad = int.Parse(txtcantprod.Text),
                 Precio = decimal.Parse(txtprecio.Text),
-                CodVenta = codventa,
+                CodVenta = Venta.CodVenta,
                 NomProd=getcell(1)
                 
             };
             //llamar a la clase de ventas
             Venta.Detalles.Add(dtv);
             Cargarlistview();
+            txtcantprod.Clear();
+            txtprecio.Clear();
 
         }
 
@@ -109,10 +117,12 @@ namespace ProyectoFerrerteriaSI
             };
 
             Venta.CodCliente = txtcodclien.Text;
+            Venta.NomUsuario = Menu.Usuario.NombreUsuario;
+           
 
 
             string msg = "";
-            var res = Cliente.Insertar(); //valor booleano
+            var res = Cliente.SaveCliente(); //valor booleano
             if (res == true)
             {
                 res = Venta.SaveVenta();
@@ -133,6 +143,8 @@ namespace ProyectoFerrerteriaSI
             }
 
             MessageBox.Show(msg, "Mensaje del Sistema");
+
+            limpiarventas();
         }
     }
 }
