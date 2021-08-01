@@ -131,6 +131,7 @@ namespace ProyectoFerrerteriaSI
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(268, 22);
             this.txtbusqueda.TabIndex = 29;
+            this.txtbusqueda.TextChanged += new System.EventHandler(this.txtbusqueda_TextChanged);
             // 
             // label4
             // 

@@ -14,15 +14,20 @@ namespace ProyectoFerrerteriaSI
     public partial class Ventas : UserControl
     {
         Productos productos = new Productos();
-        
+        DataTable listaProductos;
         Venta Venta = new Venta();
 
         public Ventas()
         {
             InitializeComponent();
-            CargarProductos();
             limpiarventas();
-         
+
+            // importante el orden primero de obtiene los productos
+            listaProductos = productos.GetProdutos();
+            // luego se carga los datos
+            CargarProductos(listaProductos);
+
+
         }
 
         private void limpiarventas()
@@ -37,10 +42,11 @@ namespace ProyectoFerrerteriaSI
 
         }
 
-        private void CargarProductos()
+        private void CargarProductos(DataTable data)
         {
-            
-            dgvprod.DataSource = productos.GetProdutos();
+
+            dgvprod.DataSource = null;
+            dgvprod.DataSource = data;
         }
 
         private void Ventas_Load(object sender, EventArgs e)
@@ -145,6 +151,17 @@ namespace ProyectoFerrerteriaSI
             MessageBox.Show(msg, "Mensaje del Sistema");
 
             limpiarventas();
+        }
+
+        private void txtbusqueda_TextChanged(object sender, EventArgs e)
+        {
+            // filterstring = "Name LIKE 'j*' " 
+            // datatableSelect( string filterExpressionexpression, string sort );
+            int codProd;
+            int.TryParse(txtbusqueda.Text, out codProd);
+            var filtrados = listaProductos.Select($"Producto like '{txtbusqueda.Text}*' OR CodigoProducto = {codProd} " );
+            // CodigoProducto like '{txtbusqueda.Text}*' or
+            CargarProductos(filtrados.CopyToDataTable());
         }
     }
 }
