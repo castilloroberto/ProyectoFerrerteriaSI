@@ -8,5 +8,7 @@
 * agregar inventario
 
 ## Presentacion en youtube
-[Ir a Youtube](https://youtu.be/I8jPSZRHaDI "Youtube")
+
+<a href="https://youtu.be/I8jPSZRHaDI" target="_blank">Ir a Youtube!</a>
+
 
