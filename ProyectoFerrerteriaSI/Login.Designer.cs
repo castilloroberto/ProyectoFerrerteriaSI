@@ -52,6 +52,7 @@ namespace ProyectoFerrerteriaSI
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(143, 22);
             this.txt_usuario.TabIndex = 0;
+            this.txt_usuario.Text = "admin";
             // 
             // txt_clave
             // 
@@ -60,6 +61,7 @@ namespace ProyectoFerrerteriaSI
             this.txt_clave.PasswordChar = '*';
             this.txt_clave.Size = new System.Drawing.Size(143, 22);
             this.txt_clave.TabIndex = 1;
+            this.txt_clave.Text = "admin";
             // 
             // label1
             // 
@@ -113,6 +115,7 @@ namespace ProyectoFerrerteriaSI
             this.Controls.Add(this.txt_usuario);
             this.Controls.Add(this.label2);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);

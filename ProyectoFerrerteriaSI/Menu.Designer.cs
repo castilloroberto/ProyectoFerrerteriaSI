@@ -71,7 +71,7 @@ namespace ProyectoFerrerteriaSI
             // 
             // btn_inventario
             // 
-            this.btn_inventario.Location = new System.Drawing.Point(90, 246);
+            this.btn_inventario.Location = new System.Drawing.Point(90, 258);
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Size = new System.Drawing.Size(135, 52);
             this.btn_inventario.TabIndex = 0;

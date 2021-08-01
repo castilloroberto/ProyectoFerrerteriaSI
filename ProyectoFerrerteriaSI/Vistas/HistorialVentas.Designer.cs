@@ -41,9 +41,11 @@ namespace ProyectoFerrerteriaSI
             this.dtp_fin = new System.Windows.Forms.DateTimePicker();
             this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
             this.sp_verVentasPorFechaTableAdapter = new ProyectoFerrerteriaSI.FerreteriaDBDataSetTableAdapters.sp_verVentasPorFechaTableAdapter();
+            this.mainPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.sp_verVentasPorFechaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FerreteriaDBDataSet)).BeginInit();
             this.panel1.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sp_verVentasPorFechaBindingSource
@@ -58,14 +60,15 @@ namespace ProyectoFerrerteriaSI
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "sp_verntasPorFecha";
             reportDataSource1.Value = this.sp_verVentasPorFechaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoFerrerteriaSI.Reportes.HistorialVentas.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 206);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1244, 422);
+            this.reportViewer1.Size = new System.Drawing.Size(1388, 482);
             this.reportViewer1.TabIndex = 0;
             // 
             // panel1
@@ -78,7 +81,7 @@ namespace ProyectoFerrerteriaSI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1244, 200);
+            this.panel1.Size = new System.Drawing.Size(1388, 200);
             this.panel1.TabIndex = 1;
             // 
             // btn_ver
@@ -132,13 +135,22 @@ namespace ProyectoFerrerteriaSI
             // 
             this.sp_verVentasPorFechaTableAdapter.ClearBeforeFill = true;
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Controls.Add(this.reportViewer1);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 200);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1388, 482);
+            this.mainPanel.TabIndex = 2;
+            // 
             // HistorialVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 628);
+            this.ClientSize = new System.Drawing.Size(1388, 682);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.reportViewer1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HistorialVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -148,6 +160,7 @@ namespace ProyectoFerrerteriaSI
             ((System.ComponentModel.ISupportInitialize)(this.FerreteriaDBDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -164,6 +177,7 @@ namespace ProyectoFerrerteriaSI
         private System.Windows.Forms.BindingSource sp_verVentasPorFechaBindingSource;
         private FerreteriaDBDataSet FerreteriaDBDataSet;
         private FerreteriaDBDataSetTableAdapters.sp_verVentasPorFechaTableAdapter sp_verVentasPorFechaTableAdapter;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }
 
