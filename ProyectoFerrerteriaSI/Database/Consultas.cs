@@ -47,6 +47,29 @@ namespace ProyectoFerrerteriaSI.Database
 
         }
 
+        public DataTable proc(string procName,List<Parametro> parametros)
+        {
+            var db = GetConexion();
+            db.Open();
+            SqlCommand command = new SqlCommand(procName, db);
+            command.CommandType = CommandType.StoredProcedure;
 
+            foreach (Parametro param in parametros)
+            {
+                command.Parameters.AddWithValue(param.Nombre, param.Valor);
+
+            }
+
+            SqlDataReader reader = command.ExecuteReader();
+            DataTable dataTable = new DataTable();
+            dataTable.Load(reader);
+
+            reader.Close();
+            db.Close();
+
+            return dataTable;
+
+
+        }
     }
 }

@@ -34,12 +34,14 @@ namespace ProyectoFerrerteriaSI
             this.btn_historial = new System.Windows.Forms.Button();
             this.btn_inventario = new System.Windows.Forms.Button();
             this.main_panel = new System.Windows.Forms.Panel();
+            this.btn_excel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btn_ventas);
+            this.panel1.Controls.Add(this.btn_excel);
             this.panel1.Controls.Add(this.btn_historial);
             this.panel1.Controls.Add(this.btn_inventario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -47,7 +49,6 @@ namespace ProyectoFerrerteriaSI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(311, 730);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_ventas
             // 
@@ -88,6 +89,16 @@ namespace ProyectoFerrerteriaSI
             this.main_panel.Size = new System.Drawing.Size(915, 730);
             this.main_panel.TabIndex = 1;
             // 
+            // btn_excel
+            // 
+            this.btn_excel.Location = new System.Drawing.Point(90, 463);
+            this.btn_excel.Name = "btn_excel";
+            this.btn_excel.Size = new System.Drawing.Size(135, 52);
+            this.btn_excel.TabIndex = 0;
+            this.btn_excel.Text = "Exportacion a excel";
+            this.btn_excel.UseVisualStyleBackColor = true;
+            this.btn_excel.Click += new System.EventHandler(this.btn_excel_Click);
+            // 
             // Menu
             // 
             this.ClientSize = new System.Drawing.Size(1226, 730);
@@ -106,5 +117,6 @@ namespace ProyectoFerrerteriaSI
         private System.Windows.Forms.Button btn_inventario;
         private System.Windows.Forms.Button btn_ventas;
         private System.Windows.Forms.Button btn_historial;
+        private System.Windows.Forms.Button btn_excel;
     }
 }

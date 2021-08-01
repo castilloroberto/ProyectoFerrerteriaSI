@@ -58,9 +58,11 @@ namespace ProyectoFerrerteriaSI
             historial.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btn_excel_Click(object sender, EventArgs e)
         {
-
+            main_panel.Controls.Clear();
+            var exportacion = new Exportacion();
+            main_panel.Controls.Add(exportacion);
         }
     }
 }
