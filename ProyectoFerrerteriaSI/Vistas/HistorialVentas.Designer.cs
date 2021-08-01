@@ -31,6 +31,8 @@ namespace ProyectoFerrerteriaSI
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.sp_verVentasPorFechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.FerreteriaDBDataSet = new ProyectoFerrerteriaSI.FerreteriaDBDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ver = new System.Windows.Forms.Button();
@@ -38,17 +40,24 @@ namespace ProyectoFerrerteriaSI
             this.label1 = new System.Windows.Forms.Label();
             this.dtp_fin = new System.Windows.Forms.DateTimePicker();
             this.dtp_inicio = new System.Windows.Forms.DateTimePicker();
-            this.FerreteriaDBDataSet = new ProyectoFerrerteriaSI.FerreteriaDBDataSet();
-            this.sp_verVentasPorFechaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sp_verVentasPorFechaTableAdapter = new ProyectoFerrerteriaSI.FerreteriaDBDataSetTableAdapters.sp_verVentasPorFechaTableAdapter();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FerreteriaDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_verVentasPorFechaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FerreteriaDBDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // sp_verVentasPorFechaBindingSource
+            // 
+            this.sp_verVentasPorFechaBindingSource.DataMember = "sp_verVentasPorFecha";
+            this.sp_verVentasPorFechaBindingSource.DataSource = this.FerreteriaDBDataSet;
+            // 
+            // FerreteriaDBDataSet
+            // 
+            this.FerreteriaDBDataSet.DataSetName = "FerreteriaDBDataSet";
+            this.FerreteriaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
             reportDataSource1.Name = "sp_verntasPorFecha";
             reportDataSource1.Value = this.sp_verVentasPorFechaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
@@ -119,16 +128,6 @@ namespace ProyectoFerrerteriaSI
             this.dtp_inicio.Size = new System.Drawing.Size(318, 34);
             this.dtp_inicio.TabIndex = 0;
             // 
-            // FerreteriaDBDataSet
-            // 
-            this.FerreteriaDBDataSet.DataSetName = "FerreteriaDBDataSet";
-            this.FerreteriaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sp_verVentasPorFechaBindingSource
-            // 
-            this.sp_verVentasPorFechaBindingSource.DataMember = "sp_verVentasPorFecha";
-            this.sp_verVentasPorFechaBindingSource.DataSource = this.FerreteriaDBDataSet;
-            // 
             // sp_verVentasPorFechaTableAdapter
             // 
             this.sp_verVentasPorFechaTableAdapter.ClearBeforeFill = true;
@@ -145,10 +144,10 @@ namespace ProyectoFerrerteriaSI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.HistorialVentas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sp_verVentasPorFechaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FerreteriaDBDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FerreteriaDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sp_verVentasPorFechaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -39,5 +39,18 @@ namespace ProyectoFerrerteriaSI
         {
 
         }
+
+        private void chbx_pass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbx_pass.Checked)
+            {
+                txt_clave.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_clave.PasswordChar = '*';
+
+            }
+        }
     }
 }
