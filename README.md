@@ -1,4 +1,4 @@
-# Proyecto sistemas inteligentes PAra negocios
+# Proyecto sistemas inteligentes Para negocios
 
 
 ## Funcionalidades 
