@@ -159,9 +159,18 @@ namespace ProyectoFerrerteriaSI
             // datatableSelect( string filterExpressionexpression, string sort );
             int codProd;
             int.TryParse(txtbusqueda.Text, out codProd);
-            var filtrados = listaProductos.Select($"Producto like '{txtbusqueda.Text}*' OR CodigoProducto = {codProd} " );
-            // CodigoProducto like '{txtbusqueda.Text}*' or
-            CargarProductos(filtrados.CopyToDataTable());
+            var filtrados = listaProductos.Select($"Producto like '{txtbusqueda.Text}*' OR CodigoProducto = {codProd}" );
+            if (filtrados.Length > 0)
+            {
+
+                CargarProductos(filtrados.CopyToDataTable());
+            
+            }
+            else
+            {
+                dgvprod.DataSource = null;
+
+            }
         }
     }
 }

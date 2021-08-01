@@ -20,11 +20,18 @@ namespace ProyectoFerrerteriaSI.Vistas
         DataTable clientes;
         DataTable ventas;
         DataTable empleados;
+        Parametro ventaParametro;
         public Exportacion()
         {
             InitializeComponent();
             CargarDatos();
             CargarDataGrid(productos);
+            ventaParametro = new Parametro()
+            {
+                Nombre = "Ventas",
+                Valor = ventas
+            };
+
             tablas = new List<Parametro>()
             {
                 new Parametro()
@@ -37,11 +44,7 @@ namespace ProyectoFerrerteriaSI.Vistas
                     Nombre ="Clientes",
                     Valor = clientes
                 },
-                new Parametro()
-                {
-                    Nombre ="Ventas",
-                    Valor = ventas
-                },
+                
                  new Parametro()
                 {
                     Nombre ="Empleados",
@@ -49,7 +52,7 @@ namespace ProyectoFerrerteriaSI.Vistas
                 }
                 // 
             };
-
+            tablas.Add(ventaParametro);
 
         }
         private void CargarDatos()
@@ -65,6 +68,7 @@ namespace ProyectoFerrerteriaSI.Vistas
 
         private void CargarVentas()
         {
+
             ventas = consulta.proc(
                 "sp_ventasPorFecha",
                 new List<Parametro>
@@ -73,6 +77,7 @@ namespace ProyectoFerrerteriaSI.Vistas
                     new Parametro { Nombre = "@fechaFin", Valor = dtp_fin.Value }
                 }
             );
+           
         }
 
         private void CargarDataGrid(DataTable tabla)
@@ -115,12 +120,20 @@ namespace ProyectoFerrerteriaSI.Vistas
         {
             CargarVentas();
             CargarDataGrid(ventas);
+            updateParametros();
+        }
+        private void updateParametros()
+        {
+            tablas.Remove(ventaParametro);
+            ventaParametro.Valor = ventas;
+            tablas.Add(ventaParametro);
         }
 
         private void dtp_fin_ValueChanged(object sender, EventArgs e)
         {
             CargarVentas();
             CargarDataGrid(ventas);
+            updateParametros();
 
         }
 

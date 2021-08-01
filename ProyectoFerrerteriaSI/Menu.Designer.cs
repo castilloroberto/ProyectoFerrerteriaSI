@@ -31,16 +31,18 @@ namespace ProyectoFerrerteriaSI
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ventas = new System.Windows.Forms.Button();
+            this.btn_excel = new System.Windows.Forms.Button();
             this.btn_historial = new System.Windows.Forms.Button();
             this.btn_inventario = new System.Windows.Forms.Button();
             this.main_panel = new System.Windows.Forms.Panel();
-            this.btn_excel = new System.Windows.Forms.Button();
+            this.btn_quit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btn_ventas);
+            this.panel1.Controls.Add(this.btn_quit);
             this.panel1.Controls.Add(this.btn_excel);
             this.panel1.Controls.Add(this.btn_historial);
             this.panel1.Controls.Add(this.btn_inventario);
@@ -59,6 +61,16 @@ namespace ProyectoFerrerteriaSI
             this.btn_ventas.Text = "Ventas";
             this.btn_ventas.UseVisualStyleBackColor = true;
             this.btn_ventas.Click += new System.EventHandler(this.btn_ventas_Click);
+            // 
+            // btn_excel
+            // 
+            this.btn_excel.Location = new System.Drawing.Point(90, 463);
+            this.btn_excel.Name = "btn_excel";
+            this.btn_excel.Size = new System.Drawing.Size(135, 52);
+            this.btn_excel.TabIndex = 0;
+            this.btn_excel.Text = "Exportacion a excel";
+            this.btn_excel.UseVisualStyleBackColor = true;
+            this.btn_excel.Click += new System.EventHandler(this.btn_excel_Click);
             // 
             // btn_historial
             // 
@@ -89,15 +101,19 @@ namespace ProyectoFerrerteriaSI
             this.main_panel.Size = new System.Drawing.Size(915, 730);
             this.main_panel.TabIndex = 1;
             // 
-            // btn_excel
+            // btn_quit
             // 
-            this.btn_excel.Location = new System.Drawing.Point(90, 463);
-            this.btn_excel.Name = "btn_excel";
-            this.btn_excel.Size = new System.Drawing.Size(135, 52);
-            this.btn_excel.TabIndex = 0;
-            this.btn_excel.Text = "Exportacion a excel";
-            this.btn_excel.UseVisualStyleBackColor = true;
-            this.btn_excel.Click += new System.EventHandler(this.btn_excel_Click);
+            this.btn_quit.BackColor = System.Drawing.Color.Crimson;
+            this.btn_quit.FlatAppearance.BorderSize = 0;
+            this.btn_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_quit.ForeColor = System.Drawing.Color.White;
+            this.btn_quit.Location = new System.Drawing.Point(90, 650);
+            this.btn_quit.Name = "btn_quit";
+            this.btn_quit.Size = new System.Drawing.Size(135, 52);
+            this.btn_quit.TabIndex = 0;
+            this.btn_quit.Text = "Cerrar Sesion";
+            this.btn_quit.UseVisualStyleBackColor = false;
+            this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
             // 
             // Menu
             // 
@@ -118,5 +134,6 @@ namespace ProyectoFerrerteriaSI
         private System.Windows.Forms.Button btn_ventas;
         private System.Windows.Forms.Button btn_historial;
         private System.Windows.Forms.Button btn_excel;
+        private System.Windows.Forms.Button btn_quit;
     }
 }

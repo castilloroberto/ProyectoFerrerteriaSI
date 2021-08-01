@@ -64,5 +64,12 @@ namespace ProyectoFerrerteriaSI
             var exportacion = new Exportacion();
             main_panel.Controls.Add(exportacion);
         }
+
+        private void btn_quit_Click(object sender, EventArgs e)
+        {
+            var login = new Login();
+            login.Show();
+            this.Close();
+        }
     }
 }
