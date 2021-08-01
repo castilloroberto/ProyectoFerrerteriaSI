@@ -21,11 +21,7 @@ namespace ProyectoFerrerteriaSI.Database
         public List<DetalleVentas> Detalles { get; set; }
 
         public Venta() {
-
             Detalles = new List<DetalleVentas>();
-        
-        
-        
         }
 
         public bool SaveVenta()
@@ -66,6 +62,23 @@ namespace ProyectoFerrerteriaSI.Database
 
 
         }
+        
+        public DataRow GetMinMaxFechas()
+        {
+            var db = GetConexion();
+            db.Open();
 
+            DataTable fechas = new DataTable();
+            SqlCommand command = new SqlCommand("sp_getMinMaxFechas", db);
+            command.CommandType = CommandType.StoredProcedure;
+            SqlDataReader reader = command.ExecuteReader();
+
+            fechas.Load(reader);
+
+            reader.Close();
+            db.Close();
+
+            return fechas.Rows[0];
+        } 
     }
 }

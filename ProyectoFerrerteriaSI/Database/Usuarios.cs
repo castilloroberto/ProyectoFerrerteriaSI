@@ -34,14 +34,15 @@ namespace ProyectoFerrerteriaSI.Database
             SqlDataReader reader = query.ExecuteReader();
 
             res.Load(reader);
-            CodEmpleado = res.Rows[0].Field<string>("Cod_Empleado");
-            IDNivel = res.Rows[0].Field<int>("IDNivel");
+
 
             db.Close();
 
 
             if (res.Rows.Count > 0)
             {
+                CodEmpleado = res.Rows[0].Field<string>("Cod_Empleado");
+                IDNivel = res.Rows[0].Field<int>("IDNivel");
                 return true; 
 
             } 

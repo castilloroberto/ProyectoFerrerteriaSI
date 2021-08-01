@@ -58,7 +58,7 @@ namespace ProyectoFerrerteriaSI
                 CodVenta = codventa,
                 NomProd=getcell(1)
                 
-        };
+            };
             //llamar a la clase de ventas
             Venta.Detalles.Add(dtv);
             Cargarlistview();

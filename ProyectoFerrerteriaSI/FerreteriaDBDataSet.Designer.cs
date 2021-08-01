@@ -279,17 +279,27 @@ namespace ProyectoFerrerteriaSI {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class sp_verVentasPorFechaDataTable : global::System.Data.TypedTableBase<sp_verVentasPorFechaRow> {
             
-            private global::System.Data.DataColumn columnCod_Venta;
-            
             private global::System.Data.DataColumn columnCodigofactura;
             
             private global::System.Data.DataColumn columnCod_Cliente;
             
             private global::System.Data.DataColumn columnNom_Usuario;
             
-            private global::System.Data.DataColumn columnCod_CAI;
-            
             private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnCod_Cliente1;
+            
+            private global::System.Data.DataColumn columnNom_Cliente;
+            
+            private global::System.Data.DataColumn columnApell_Cliente;
+            
+            private global::System.Data.DataColumn columnCod_Producto;
+            
+            private global::System.Data.DataColumn columnCantidad;
+            
+            private global::System.Data.DataColumn columnPrecio;
+            
+            private global::System.Data.DataColumn columnProducto;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -326,14 +336,6 @@ namespace ProyectoFerrerteriaSI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cod_VentaColumn {
-                get {
-                    return this.columnCod_Venta;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn CodigofacturaColumn {
                 get {
                     return this.columnCodigofactura;
@@ -358,17 +360,65 @@ namespace ProyectoFerrerteriaSI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cod_CAIColumn {
+            public global::System.Data.DataColumn FechaColumn {
                 get {
-                    return this.columnCod_CAI;
+                    return this.columnFecha;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FechaColumn {
+            public global::System.Data.DataColumn Cod_Cliente1Column {
                 get {
-                    return this.columnFecha;
+                    return this.columnCod_Cliente1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Nom_ClienteColumn {
+                get {
+                    return this.columnNom_Cliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Apell_ClienteColumn {
+                get {
+                    return this.columnApell_Cliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Cod_ProductoColumn {
+                get {
+                    return this.columnCod_Producto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CantidadColumn {
+                get {
+                    return this.columnCantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PrecioColumn {
+                get {
+                    return this.columnPrecio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ProductoColumn {
+                get {
+                    return this.columnProducto;
                 }
             }
             
@@ -409,25 +459,23 @@ namespace ProyectoFerrerteriaSI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_verVentasPorFechaRow Addsp_verVentasPorFechaRow(System.Guid Cod_Venta, string Cod_Cliente, string Nom_Usuario, string Cod_CAI, System.DateTime Fecha) {
+            public sp_verVentasPorFechaRow Addsp_verVentasPorFechaRow(string Cod_Cliente, string Nom_Usuario, System.DateTime Fecha, string Cod_Cliente1, string Nom_Cliente, string Apell_Cliente, int Cod_Producto, int Cantidad, decimal Precio, string Producto) {
                 sp_verVentasPorFechaRow rowsp_verVentasPorFechaRow = ((sp_verVentasPorFechaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Cod_Venta,
                         null,
                         Cod_Cliente,
                         Nom_Usuario,
-                        Cod_CAI,
-                        Fecha};
+                        Fecha,
+                        Cod_Cliente1,
+                        Nom_Cliente,
+                        Apell_Cliente,
+                        Cod_Producto,
+                        Cantidad,
+                        Precio,
+                        Producto};
                 rowsp_verVentasPorFechaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowsp_verVentasPorFechaRow);
                 return rowsp_verVentasPorFechaRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_verVentasPorFechaRow FindByCod_Venta(System.Guid Cod_Venta) {
-                return ((sp_verVentasPorFechaRow)(this.Rows.Find(new object[] {
-                            Cod_Venta})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -447,39 +495,60 @@ namespace ProyectoFerrerteriaSI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnCod_Venta = base.Columns["Cod_Venta"];
                 this.columnCodigofactura = base.Columns["Codigofactura"];
                 this.columnCod_Cliente = base.Columns["Cod_Cliente"];
                 this.columnNom_Usuario = base.Columns["Nom_Usuario"];
-                this.columnCod_CAI = base.Columns["Cod_CAI"];
                 this.columnFecha = base.Columns["Fecha"];
+                this.columnCod_Cliente1 = base.Columns["Cod_Cliente1"];
+                this.columnNom_Cliente = base.Columns["Nom_Cliente"];
+                this.columnApell_Cliente = base.Columns["Apell_Cliente"];
+                this.columnCod_Producto = base.Columns["Cod_Producto"];
+                this.columnCantidad = base.Columns["Cantidad"];
+                this.columnPrecio = base.Columns["Precio"];
+                this.columnProducto = base.Columns["Producto"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnCod_Venta = new global::System.Data.DataColumn("Cod_Venta", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod_Venta);
                 this.columnCodigofactura = new global::System.Data.DataColumn("Codigofactura", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodigofactura);
                 this.columnCod_Cliente = new global::System.Data.DataColumn("Cod_Cliente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCod_Cliente);
                 this.columnNom_Usuario = new global::System.Data.DataColumn("Nom_Usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNom_Usuario);
-                this.columnCod_CAI = new global::System.Data.DataColumn("Cod_CAI", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod_CAI);
                 this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCod_Venta}, true));
-                this.columnCod_Venta.AllowDBNull = false;
-                this.columnCod_Venta.Unique = true;
+                this.columnCod_Cliente1 = new global::System.Data.DataColumn("Cod_Cliente1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Cliente1);
+                this.columnNom_Cliente = new global::System.Data.DataColumn("Nom_Cliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNom_Cliente);
+                this.columnApell_Cliente = new global::System.Data.DataColumn("Apell_Cliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnApell_Cliente);
+                this.columnCod_Producto = new global::System.Data.DataColumn("Cod_Producto", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Producto);
+                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad);
+                this.columnPrecio = new global::System.Data.DataColumn("Precio", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecio);
+                this.columnProducto = new global::System.Data.DataColumn("Producto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProducto);
                 this.columnCodigofactura.AutoIncrement = true;
                 this.columnCodigofactura.AllowDBNull = false;
                 this.columnCodigofactura.ReadOnly = true;
                 this.columnCod_Cliente.MaxLength = 13;
                 this.columnNom_Usuario.MaxLength = 20;
-                this.columnCod_CAI.MaxLength = 50;
+                this.columnCod_Cliente1.AllowDBNull = false;
+                this.columnCod_Cliente1.MaxLength = 13;
+                this.columnNom_Cliente.AllowDBNull = false;
+                this.columnNom_Cliente.MaxLength = 30;
+                this.columnApell_Cliente.AllowDBNull = false;
+                this.columnApell_Cliente.MaxLength = 30;
+                this.columnCod_Producto.AllowDBNull = false;
+                this.columnCantidad.AllowDBNull = false;
+                this.columnPrecio.AllowDBNull = false;
+                this.columnProducto.AllowDBNull = false;
+                this.columnProducto.MaxLength = 70;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -622,17 +691,6 @@ namespace ProyectoFerrerteriaSI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.Guid Cod_Venta {
-                get {
-                    return ((global::System.Guid)(this[this.tablesp_verVentasPorFecha.Cod_VentaColumn]));
-                }
-                set {
-                    this[this.tablesp_verVentasPorFecha.Cod_VentaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Codigofactura {
                 get {
                     return ((int)(this[this.tablesp_verVentasPorFecha.CodigofacturaColumn]));
@@ -678,22 +736,6 @@ namespace ProyectoFerrerteriaSI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cod_CAI {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_verVentasPorFecha.Cod_CAIColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Cod_CAI\' de la tabla \'sp_verVentasPorFecha\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_verVentasPorFecha.Cod_CAIColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime Fecha {
                 get {
                     try {
@@ -705,6 +747,83 @@ namespace ProyectoFerrerteriaSI {
                 }
                 set {
                     this[this.tablesp_verVentasPorFecha.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Cod_Cliente1 {
+                get {
+                    return ((string)(this[this.tablesp_verVentasPorFecha.Cod_Cliente1Column]));
+                }
+                set {
+                    this[this.tablesp_verVentasPorFecha.Cod_Cliente1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nom_Cliente {
+                get {
+                    return ((string)(this[this.tablesp_verVentasPorFecha.Nom_ClienteColumn]));
+                }
+                set {
+                    this[this.tablesp_verVentasPorFecha.Nom_ClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Apell_Cliente {
+                get {
+                    return ((string)(this[this.tablesp_verVentasPorFecha.Apell_ClienteColumn]));
+                }
+                set {
+                    this[this.tablesp_verVentasPorFecha.Apell_ClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Cod_Producto {
+                get {
+                    return ((int)(this[this.tablesp_verVentasPorFecha.Cod_ProductoColumn]));
+                }
+                set {
+                    this[this.tablesp_verVentasPorFecha.Cod_ProductoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Cantidad {
+                get {
+                    return ((int)(this[this.tablesp_verVentasPorFecha.CantidadColumn]));
+                }
+                set {
+                    this[this.tablesp_verVentasPorFecha.CantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Precio {
+                get {
+                    return ((decimal)(this[this.tablesp_verVentasPorFecha.PrecioColumn]));
+                }
+                set {
+                    this[this.tablesp_verVentasPorFecha.PrecioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Producto {
+                get {
+                    return ((string)(this[this.tablesp_verVentasPorFecha.ProductoColumn]));
+                }
+                set {
+                    this[this.tablesp_verVentasPorFecha.ProductoColumn] = value;
                 }
             }
             
@@ -730,18 +849,6 @@ namespace ProyectoFerrerteriaSI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNom_UsuarioNull() {
                 this[this.tablesp_verVentasPorFecha.Nom_UsuarioColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCod_CAINull() {
-                return this.IsNull(this.tablesp_verVentasPorFecha.Cod_CAIColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCod_CAINull() {
-                this[this.tablesp_verVentasPorFecha.Cod_CAIColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -916,12 +1023,17 @@ namespace ProyectoFerrerteriaSI.FerreteriaDBDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "sp_verVentasPorFecha";
-            tableMapping.ColumnMappings.Add("Cod_Venta", "Cod_Venta");
             tableMapping.ColumnMappings.Add("Codigofactura", "Codigofactura");
             tableMapping.ColumnMappings.Add("Cod_Cliente", "Cod_Cliente");
             tableMapping.ColumnMappings.Add("Nom_Usuario", "Nom_Usuario");
-            tableMapping.ColumnMappings.Add("Cod_CAI", "Cod_CAI");
             tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("Cod_Cliente1", "Cod_Cliente1");
+            tableMapping.ColumnMappings.Add("Nom_Cliente", "Nom_Cliente");
+            tableMapping.ColumnMappings.Add("Apell_Cliente", "Apell_Cliente");
+            tableMapping.ColumnMappings.Add("Cod_Producto", "Cod_Producto");
+            tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
+            tableMapping.ColumnMappings.Add("Precio", "Precio");
+            tableMapping.ColumnMappings.Add("Producto", "Producto");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
