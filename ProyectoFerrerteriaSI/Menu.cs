@@ -71,5 +71,12 @@ namespace ProyectoFerrerteriaSI
             login.Show();
             this.Close();
         }
+
+        private void btn_integrantes_Click(object sender, EventArgs e)
+        {
+            main_panel.Controls.Clear();
+            var integrantes = new Integrantes();
+            main_panel.Controls.Add(integrantes);
+        }
     }
 }

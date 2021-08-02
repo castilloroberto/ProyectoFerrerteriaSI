@@ -30,15 +30,15 @@ namespace ProyectoFerrerteriaSI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_ventas = new System.Windows.Forms.Button();
             this.btn_quit = new System.Windows.Forms.Button();
+            this.btn_integrantes = new System.Windows.Forms.Button();
             this.btn_excel = new System.Windows.Forms.Button();
             this.btn_historial = new System.Windows.Forms.Button();
             this.btn_inventario = new System.Windows.Forms.Button();
             this.main_panel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btn_integrantes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,26 @@ namespace ProyectoFerrerteriaSI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(311, 730);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.label2.Location = new System.Drawing.Point(12, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(276, 48);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "La Esperanza";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.label1.Location = new System.Drawing.Point(47, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 48);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ferreteria";
             // 
             // btn_ventas
             // 
@@ -81,6 +101,16 @@ namespace ProyectoFerrerteriaSI
             this.btn_quit.Text = "Cerrar Sesion";
             this.btn_quit.UseVisualStyleBackColor = false;
             this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
+            // 
+            // btn_integrantes
+            // 
+            this.btn_integrantes.Location = new System.Drawing.Point(90, 536);
+            this.btn_integrantes.Name = "btn_integrantes";
+            this.btn_integrantes.Size = new System.Drawing.Size(135, 52);
+            this.btn_integrantes.TabIndex = 0;
+            this.btn_integrantes.Text = "Integrantes";
+            this.btn_integrantes.UseVisualStyleBackColor = true;
+            this.btn_integrantes.Click += new System.EventHandler(this.btn_integrantes_Click);
             // 
             // btn_excel
             // 
@@ -120,36 +150,6 @@ namespace ProyectoFerrerteriaSI
             this.main_panel.Name = "main_panel";
             this.main_panel.Size = new System.Drawing.Size(915, 730);
             this.main_panel.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label1.Location = new System.Drawing.Point(47, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 48);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ferreteria";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.label2.Location = new System.Drawing.Point(12, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(276, 48);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "La Esperanza";
-            // 
-            // btn_integrantes
-            // 
-            this.btn_integrantes.Location = new System.Drawing.Point(90, 536);
-            this.btn_integrantes.Name = "btn_integrantes";
-            this.btn_integrantes.Size = new System.Drawing.Size(135, 52);
-            this.btn_integrantes.TabIndex = 0;
-            this.btn_integrantes.Text = "Integrantes";
-            this.btn_integrantes.UseVisualStyleBackColor = true;
-            this.btn_integrantes.Click += new System.EventHandler(this.btn_excel_Click);
             // 
             // Menu
             // 
