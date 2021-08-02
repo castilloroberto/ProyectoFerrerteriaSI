@@ -31,18 +31,24 @@ namespace ProyectoFerrerteriaSI
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ventas = new System.Windows.Forms.Button();
+            this.btn_quit = new System.Windows.Forms.Button();
             this.btn_excel = new System.Windows.Forms.Button();
             this.btn_historial = new System.Windows.Forms.Button();
             this.btn_inventario = new System.Windows.Forms.Button();
             this.main_panel = new System.Windows.Forms.Panel();
-            this.btn_quit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_integrantes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_ventas);
             this.panel1.Controls.Add(this.btn_quit);
+            this.panel1.Controls.Add(this.btn_integrantes);
             this.panel1.Controls.Add(this.btn_excel);
             this.panel1.Controls.Add(this.btn_historial);
             this.panel1.Controls.Add(this.btn_inventario);
@@ -54,7 +60,7 @@ namespace ProyectoFerrerteriaSI
             // 
             // btn_ventas
             // 
-            this.btn_ventas.Location = new System.Drawing.Point(90, 150);
+            this.btn_ventas.Location = new System.Drawing.Point(90, 183);
             this.btn_ventas.Name = "btn_ventas";
             this.btn_ventas.Size = new System.Drawing.Size(135, 52);
             this.btn_ventas.TabIndex = 0;
@@ -62,9 +68,23 @@ namespace ProyectoFerrerteriaSI
             this.btn_ventas.UseVisualStyleBackColor = true;
             this.btn_ventas.Click += new System.EventHandler(this.btn_ventas_Click);
             // 
+            // btn_quit
+            // 
+            this.btn_quit.BackColor = System.Drawing.Color.Crimson;
+            this.btn_quit.FlatAppearance.BorderSize = 0;
+            this.btn_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_quit.ForeColor = System.Drawing.Color.White;
+            this.btn_quit.Location = new System.Drawing.Point(90, 650);
+            this.btn_quit.Name = "btn_quit";
+            this.btn_quit.Size = new System.Drawing.Size(135, 52);
+            this.btn_quit.TabIndex = 0;
+            this.btn_quit.Text = "Cerrar Sesion";
+            this.btn_quit.UseVisualStyleBackColor = false;
+            this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
+            // 
             // btn_excel
             // 
-            this.btn_excel.Location = new System.Drawing.Point(90, 463);
+            this.btn_excel.Location = new System.Drawing.Point(90, 392);
             this.btn_excel.Name = "btn_excel";
             this.btn_excel.Size = new System.Drawing.Size(135, 52);
             this.btn_excel.TabIndex = 0;
@@ -74,7 +94,7 @@ namespace ProyectoFerrerteriaSI
             // 
             // btn_historial
             // 
-            this.btn_historial.Location = new System.Drawing.Point(90, 361);
+            this.btn_historial.Location = new System.Drawing.Point(90, 321);
             this.btn_historial.Name = "btn_historial";
             this.btn_historial.Size = new System.Drawing.Size(135, 52);
             this.btn_historial.TabIndex = 0;
@@ -84,7 +104,7 @@ namespace ProyectoFerrerteriaSI
             // 
             // btn_inventario
             // 
-            this.btn_inventario.Location = new System.Drawing.Point(90, 258);
+            this.btn_inventario.Location = new System.Drawing.Point(90, 254);
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Size = new System.Drawing.Size(135, 52);
             this.btn_inventario.TabIndex = 0;
@@ -101,19 +121,35 @@ namespace ProyectoFerrerteriaSI
             this.main_panel.Size = new System.Drawing.Size(915, 730);
             this.main_panel.TabIndex = 1;
             // 
-            // btn_quit
+            // label1
             // 
-            this.btn_quit.BackColor = System.Drawing.Color.Crimson;
-            this.btn_quit.FlatAppearance.BorderSize = 0;
-            this.btn_quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_quit.ForeColor = System.Drawing.Color.White;
-            this.btn_quit.Location = new System.Drawing.Point(90, 650);
-            this.btn_quit.Name = "btn_quit";
-            this.btn_quit.Size = new System.Drawing.Size(135, 52);
-            this.btn_quit.TabIndex = 0;
-            this.btn_quit.Text = "Cerrar Sesion";
-            this.btn_quit.UseVisualStyleBackColor = false;
-            this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.label1.Location = new System.Drawing.Point(47, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 48);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ferreteria";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.label2.Location = new System.Drawing.Point(12, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(276, 48);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "La Esperanza";
+            // 
+            // btn_integrantes
+            // 
+            this.btn_integrantes.Location = new System.Drawing.Point(90, 536);
+            this.btn_integrantes.Name = "btn_integrantes";
+            this.btn_integrantes.Size = new System.Drawing.Size(135, 52);
+            this.btn_integrantes.TabIndex = 0;
+            this.btn_integrantes.Text = "Integrantes";
+            this.btn_integrantes.UseVisualStyleBackColor = true;
+            this.btn_integrantes.Click += new System.EventHandler(this.btn_excel_Click);
             // 
             // Menu
             // 
@@ -123,6 +159,7 @@ namespace ProyectoFerrerteriaSI
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -135,5 +172,8 @@ namespace ProyectoFerrerteriaSI
         private System.Windows.Forms.Button btn_historial;
         private System.Windows.Forms.Button btn_excel;
         private System.Windows.Forms.Button btn_quit;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_integrantes;
     }
 }

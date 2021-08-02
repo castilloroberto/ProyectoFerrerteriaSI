@@ -102,6 +102,12 @@
     <Compile Include="Vistas\Exportacion.Designer.cs">
       <DependentUpon>Exportacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Integrantes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Integrantes.Designer.cs">
+      <DependentUpon>Integrantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Inventario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     <EmbeddedResource Include="Reportes\HistorialVentas.rdlc" />
     <EmbeddedResource Include="Vistas\Exportacion.resx">
       <DependentUpon>Exportacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Integrantes.resx">
+      <DependentUpon>Integrantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
